@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="400.0" stylesheets="@../styles/frame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="400.0">
+         <image>
+            <Image url="@../img/background.png" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="300.0" prefWidth="400.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="240.0">
+               <children>
+                  <Label id="Question" text="How far will you go on an icy road &#10;before the car comes to a stop?">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Enter speed in km/h:">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="speed" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="submit" mnemonicParsing="false" onAction="#handleButtonClicked" text="Calculate!">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="errorMessage" text="Please enter a number from 0-120" textFill="#f50000" visible="false">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="answer" text="It will take x metres &#10;before you stop." visible="false">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="beSafe" text="Please drive safely in winter!" visible="false">
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="164.0">
+               <children>
+                  <ImageView id="exitButton" fx:id="exitButton" fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../img/ExitButton.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets right="4.0" top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
